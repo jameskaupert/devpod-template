@@ -3,5 +3,8 @@
         "context": "..",
         "dockerfile": "Dockerfile"
     },
+    "containerEnv": {
+        "DEVPOD": "1"
+    },
     "postCreateCommand": "scripts/setup"
 }
