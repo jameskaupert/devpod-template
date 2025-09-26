@@ -1,6 +1,10 @@
+[env]
+MISE_NPM_BUN=true
+
 [tools]
 node = "latest"
+bun = "latest"
 python = "latest"
 uv = "latest"
-"npm:@anthropic-ai/claude-code" = "latest"
-"npm:ccusage" = "latest"
+
+"npm:opencode-ai" = "latest"
