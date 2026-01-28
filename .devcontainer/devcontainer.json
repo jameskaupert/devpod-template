@@ -1,10 +1,15 @@
 {
-    "build": {
-        "context": "..",
-        "dockerfile": "Dockerfile"
-    },
-    "containerEnv": {
-        "DEVPOD": "1"
-    },
-    "postCreateCommand": "scripts/setup"
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile"
+  },
+  "mounts": [
+    "source=${localEnv:XDG_RUNTIME_DIR}/${localEnv:WAYLAND_DISPLAY},target=/tmp/wayland-0,type=bind"
+  ],
+  "containerEnv": {
+    "DEVPOD": "1",
+    "MISE_ENV": "devpod",
+    "WAYLAND_DISPLAY": "/tmp/wayland-0"
+  },
+  "postCreateCommand": "scripts/setup"
 }
